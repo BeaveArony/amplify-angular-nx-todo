@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~aws-amplify-angular/theme.css';
+/* @import '~@aws-amplify/ui/src/Button.css';
+@import '~@aws-amplify/ui/src/Input.css';
+@import '~@aws-amplify/ui/src/Nav.css';
+@import '~@aws-amplify/ui/src/Form.css'; */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background-color: var(--color-accent-brown);
+}
+
+/* Amplify UI fixes */
+.amplify-form-input {
+  width: calc(100% - 1em);
+  box-sizing: border-box;
+}
+.amplify-alert {
+  margin-top: 2em;
+}
+.amplify-greeting > * {
+  white-space: nowrap;
+}
+.amplify-greeting-flex-spacer {
+  width: 100%;
+}
+
+.card,
+.amplify-authenticator {
+  width: var(--component-width-desktop);
+  margin: 1em auto;
+  border-radius: 6px;
+  background-color: var(--color-white);
+  box-shadow: var(--box-shadow);
+}
+.card-container {
+  width: 400px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .card,
+  .amplify-authenticator {
+    width: var(--component-width-mobile);
+    border-radius: 0;
+    margin: 0.5em auto;
+  }
+  .card-container {
+    width: auto;
+  }
+  .amplify-alert {
+    left: 4%;
+  }
+}

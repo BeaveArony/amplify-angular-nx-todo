@@ -1,0 +1,27 @@
+{
+  "npmScope": "my",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "todo-app": {
+      "tags": ["app"]
+    },
+    "todo-app-e2e": {
+      "tags": []
+    },
+    "appsync": {
+      "tags": ["shared"]
+    },
+    "todo-ui": {
+      "tags": ["ui"]
+    },
+    "shared": {
+      "tags": ["shared"]
+    }
+  }
+}

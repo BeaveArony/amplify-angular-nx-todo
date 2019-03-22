@@ -1,0 +1,7 @@
+<my-todo-item
+  *ngFor="let todo of visibleTodos"
+  [todo]="todo"
+  (toggled)="toggled.emit(todo)"
+  (deleted)="deleted.emit(todo)"
+></my-todo-item>
+<div *ngIf="!visibleTodos || visibleTodos?.length === 0">No todos</div>

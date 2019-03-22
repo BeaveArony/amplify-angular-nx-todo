@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-container">
+    <my-create-form (created)="create($event)"></my-create-form>
+    <my-filter-bar (filtered)="filter = $event"> </my-filter-bar>
+  </div>
+</div>
+<div class="card">
+  <div class="card-container">
+    <my-todo-list
+      [todos]="todos"
+      [filter]="filter"
+      (toggled)="toggle($event)"
+      (deleted)="delete($event)"
+    ></my-todo-list>
+  </div>
+</div>

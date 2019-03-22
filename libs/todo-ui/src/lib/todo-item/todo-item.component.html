@@ -1,0 +1,17 @@
+<div class="item" *ngIf="todo">
+  <div
+    class="checkmark"
+    [class.checked]="todo.completed"
+    (click)="toggled.emit()"
+  >
+    {{ todo.completed ? '✔' : '🗸' }}
+  </div>
+  <div
+    class="content"
+    [ngStyle]="{ textDecoration: todo.completed ? 'line-through' : 'none' }"
+    (click)="toggled.emit()"
+  >
+    {{ todo.name }}
+  </div>
+  <div class="delete" (click)="deleted.emit()">✗</div>
+</div>

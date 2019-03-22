@@ -1,0 +1,23 @@
+.delete {
+  color: var(--red);
+  font-size: 32px;
+  cursor: pointer;
+}
+.content {
+  width: 100%;
+  margin: 10px 2em;
+  cursor: pointer;
+}
+.checkmark {
+  font-size: 32px;
+  cursor: pointer;
+  width: 38px;
+}
+.checkmark.checked {
+  color: var(--ion-color-success-shade);
+}
+.item {
+  margin: 1em 0;
+  display: flex;
+  justify-content: space-between;
+}

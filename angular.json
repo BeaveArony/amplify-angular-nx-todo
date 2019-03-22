@@ -1,0 +1,211 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "",
+  "projects": {
+    "todo-app": {
+      "root": "apps/todo-app/",
+      "sourceRoot": "apps/todo-app/src",
+      "projectType": "application",
+      "prefix": "my",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/todo-app",
+            "index": "apps/todo-app/src/index.html",
+            "main": "apps/todo-app/src/main.ts",
+            "polyfills": "apps/todo-app/src/polyfills.ts",
+            "tsConfig": "apps/todo-app/tsconfig.app.json",
+            "assets": [
+              "apps/todo-app/src/favicon.ico",
+              "apps/todo-app/src/assets"
+            ],
+            "styles": ["apps/todo-app/src/styles.css"],
+            "scripts": [],
+            "es5BrowserSupport": true
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/todo-app/src/environments/environment.ts",
+                  "with": "apps/todo-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "todo-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "todo-app:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "todo-app:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/todo-app/tsconfig.app.json",
+              "apps/todo-app/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "apps/todo-app/jest.config.js",
+            "tsConfig": "apps/todo-app/tsconfig.spec.json",
+            "setupFile": "apps/todo-app/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "todo-app-e2e": {
+      "root": "apps/todo-app-e2e",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/builders:cypress",
+          "options": {
+            "cypressConfig": "apps/todo-app-e2e/cypress.json",
+            "tsConfig": "apps/todo-app-e2e/tsconfig.e2e.json",
+            "devServerTarget": "todo-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-app:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/todo-app-e2e/tsconfig.e2e.json",
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    },
+    "appsync": {
+      "root": "libs/appsync",
+      "sourceRoot": "libs/appsync/src",
+      "projectType": "library",
+      "prefix": "my",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/appsync/tsconfig.lib.json",
+              "libs/appsync/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/appsync/jest.config.js",
+            "tsConfig": "libs/appsync/tsconfig.spec.json",
+            "setupFile": "libs/appsync/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "todo-ui": {
+      "root": "libs/todo-ui",
+      "sourceRoot": "libs/todo-ui/src",
+      "projectType": "library",
+      "prefix": "my",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/todo-ui/tsconfig.lib.json",
+              "libs/todo-ui/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/todo-ui/jest.config.js",
+            "tsConfig": "libs/todo-ui/tsconfig.spec.json",
+            "setupFile": "libs/todo-ui/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "shared": {
+      "root": "libs/shared",
+      "sourceRoot": "libs/shared/src",
+      "projectType": "library",
+      "prefix": "my",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/tsconfig.lib.json",
+              "libs/shared/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/shared/jest.config.js",
+            "tsConfig": "libs/shared/tsconfig.spec.json",
+            "setupFile": "libs/shared/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    }
+  },
+  "cli": {
+    "warnings": {
+      "typescriptMismatch": false,
+      "versionMismatch": false
+    },
+    "defaultCollection": "@nrwl/schematics"
+  },
+  "schematics": {},
+  "defaultProject": "todo-app"
+}

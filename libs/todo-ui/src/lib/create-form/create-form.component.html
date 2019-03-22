@@ -1,0 +1,4 @@
+<form [formGroup]="form" (ngSubmit)="createTodo()">
+  <input type="text" formControlName="todoName" required />
+  <button type="submit" [disabled]="!form.valid">+</button>
+</form>

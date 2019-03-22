@@ -1,0 +1,31 @@
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+input {
+  height: var(--button-height);
+  width: 100%;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  border: var(--input-border);
+  border-radius: 3px;
+  background-color: #FFFFFF;
+  padding: var(--input-padding);
+  margin-right: 1em;
+  box-sizing: border-box;
+}
+button {
+  border: none;
+  min-height: var(--button-height);
+  min-width: var(--button-height);
+  color: white;
+  background-color: var(--color-primary);
+  cursor: pointer;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+button:disabled {
+  cursor: auto;
+  background-color: var(--ion-color-primary-tint);
+}

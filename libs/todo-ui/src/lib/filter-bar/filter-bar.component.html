@@ -1,0 +1,9 @@
+<nav>
+  <button
+    *ngFor="let btn of buttons"
+    (click)="filter(btn.value)"
+    [disabled]="currentFilter === btn.value"
+  >
+    {{ btn.name }}
+  </button>
+</nav>

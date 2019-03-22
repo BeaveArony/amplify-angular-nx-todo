@@ -1,0 +1,10 @@
+overwrite: true
+schema: src/graphql/schema.json
+documents: src/graphql/*.graphql
+generates:
+  ./libs/appsync/src/lib/graphql.ts:
+    plugins:
+      - "typescript-common"
+      - "typescript-client"
+      - "fragment-matcher"
+
