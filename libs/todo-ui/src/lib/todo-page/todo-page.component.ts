@@ -16,7 +16,7 @@ import {
   UpdateTodo_updateTodo,
   UPDATE_TODO
 } from '@my/appsync';
-import { Observable } from 'rxjs';
+import { ApolloError } from 'apollo-client';
 import { TodoFilterType } from '../model';
 
 @Component({
@@ -26,9 +26,9 @@ import { TodoFilterType } from '../model';
   changeDetection: ChangeDetectionStrategy.Default
 })
 export class TodoPageComponent implements OnInit {
-  todos$: Observable<ListTodos_listTodos_items[]>;
-  filter: TodoFilterType = 'SHOW_ALL';
   todos: ListTodos_listTodos_items[];
+  filter: TodoFilterType = 'SHOW_ALL';
+  errorMessage: string | null = null;
 
   ngOnInit() {
     AppSyncClient.watchQuery<ListTodos, ListTodosVariables>({
@@ -39,7 +39,7 @@ export class TodoPageComponent implements OnInit {
             a.createdOnClientAt.localeCompare(b.createdOnClientAt)
           )
         : [];
-    });
+    }, this.handleError);
   }
 
   create(name: string) {
@@ -47,14 +47,14 @@ export class TodoPageComponent implements OnInit {
       mutation: CREATE_TODO,
       variablesInfo: {
         input: {
-          name,
+          name: null,
           completed: false,
           createdOnClientAt: new Date().toISOString()
         }
       },
       cacheUpdateQuery: [LIST_TODOS],
       typename: 'Todo'
-    });
+    }).catch(this.handleError);
   }
 
   toggle({
@@ -75,7 +75,7 @@ export class TodoPageComponent implements OnInit {
       },
       cacheUpdateQuery: null,
       typename: 'Todo'
-    });
+    }).catch(this.handleError);
   }
 
   delete({ id }: ListTodos_listTodos_items) {
@@ -86,6 +86,10 @@ export class TodoPageComponent implements OnInit {
       },
       cacheUpdateQuery: [LIST_TODOS],
       typename: 'Todo'
-    });
+    }).catch(this.handleError);
   }
+
+  handleError = (err: ApolloError) => {
+    this.errorMessage = err.message;
+  };
 }

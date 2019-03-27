@@ -4,6 +4,9 @@
     <my-filter-bar (filtered)="filter = $event"> </my-filter-bar>
   </div>
 </div>
+
+<my-error-alert (closed)="errorMessage = null" [errorMessage]="errorMessage"></my-error-alert>
+
 <div class="card">
   <div class="card-container">
     <my-todo-list

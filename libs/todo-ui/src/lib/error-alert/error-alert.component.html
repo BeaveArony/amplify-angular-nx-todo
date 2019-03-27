@@ -1,0 +1,9 @@
+<div class="card" *ngIf="errorMessage">
+  <div class="card-container">
+    <div class="flex-row">
+      <span class="icon">⚠</span>
+      <div class="msg">{{ errorMessage }}</div>
+      <a class="close" (click)="closed.emit()">×</a>
+    </div>
+  </div>
+</div>

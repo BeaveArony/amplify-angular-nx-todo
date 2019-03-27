@@ -6,6 +6,7 @@ import { FilterBarComponent } from './filter-bar/filter-bar.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoPageComponent } from './todo-page/todo-page.component';
+import { ErrorAlertComponent } from './error-alert/error-alert.component';
 
 @NgModule({
   imports: [CommonModule, ReactiveFormsModule],
@@ -14,7 +15,8 @@ import { TodoPageComponent } from './todo-page/todo-page.component';
     TodoListComponent,
     TodoItemComponent,
     FilterBarComponent,
-    TodoPageComponent
+    TodoPageComponent,
+    ErrorAlertComponent
   ],
   exports: [TodoPageComponent]
 })
