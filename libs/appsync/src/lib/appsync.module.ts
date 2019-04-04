@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
-// import { Apollo, ApolloModule } from 'apollo-angular';
-import Amplify, { Auth } from 'aws-amplify';
-// import Auth from "@aws-amplify/auth";
-// import Api from "@aws-amplify/api";
+import Api from '@aws-amplify/api';
+import Auth from '@aws-amplify/auth';
+// import Amplify from '@aws-amplify/core';
+// import Analytics from '@aws-amplify/analytics';
+// import Storage from '@aws-amplify/storage';
 import { AmplifyAngularModule, AmplifyService } from 'aws-amplify-angular';
 import AWSAppSyncClient, { AUTH_TYPE } from 'aws-appsync';
 import * as localForage from 'localforage';
 import config from './aws-exports';
 
-// Auth.configure(config);
-// Api.configure(config);
-Amplify.configure(config);
+Auth.configure(config);
+Api.configure(config);
+// Analytics.configure(config);
+// Storage.configure(config);
+// Amplify.configure(config);
 
 export const AppSyncClient = new AWSAppSyncClient({
   url: config.aws_appsync_graphqlEndpoint,
