@@ -22,6 +22,9 @@
     },
     "shared": {
       "tags": ["shared"]
+    },
+    "auth": {
+      "tags": ["shared"]
     }
   }
 }

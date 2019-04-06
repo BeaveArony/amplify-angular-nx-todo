@@ -41,7 +41,7 @@
     "@angular/platform-browser-dynamic": "^7.0.0",
     "@angular/router": "^7.0.0",
     "apollo-angular": "^1.5.0",
-    "aws-amplify": "^1.1.22",
+    "aws-amplify": "^1.1.23",
     "aws-amplify-angular": "^2.1.9",
     "aws-appsync": "^1.7.2",
     "core-js": "^2.5.4",
@@ -51,6 +51,7 @@
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
+    "jest-preset-angular": "7.0.0",
     "@angular-devkit/build-angular": "~0.13.0",
     "@angular/cli": "7.3.1",
     "@angular/compiler-cli": "~7.2.0",
@@ -65,7 +66,6 @@
     "cypress": "3.1.0",
     "dotenv": "6.2.0",
     "jest": "24.1.0",
-    "jest-preset-angular": "7.0.0",
     "prettier": "1.15.2",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",

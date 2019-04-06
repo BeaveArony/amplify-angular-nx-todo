@@ -17,7 +17,8 @@
     "paths": {
       "@my/appsync": ["libs/appsync/src/index.ts"],
       "@my/todo-ui": ["libs/todo-ui/src/index.ts"],
-      "@my/shared": ["libs/shared/src/index.ts"]
+      "@my/shared": ["libs/shared/src/index.ts"],
+      "@my/auth": ["libs/auth/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
