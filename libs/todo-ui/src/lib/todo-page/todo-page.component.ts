@@ -47,7 +47,7 @@ export class TodoPageComponent implements OnInit {
       mutation: CREATE_TODO,
       variablesInfo: {
         input: {
-          name: null,
+          name,
           completed: false,
           createdOnClientAt: new Date().toISOString()
         }

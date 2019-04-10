@@ -23,8 +23,11 @@
     "shared": {
       "tags": ["shared"]
     },
-    "auth": {
-      "tags": ["shared"]
+    "second-app": {
+      "tags": ["app"]
+    },
+    "second-app-e2e": {
+      "tags": []
     }
   }
 }
