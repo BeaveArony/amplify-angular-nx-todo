@@ -1,0 +1,19 @@
+{
+    "master": {
+        "awscloudformation": {
+            "AuthRoleName": "amplifynx-20190406133327-authRole",
+            "UnauthRoleArn": "arn:aws:iam::380227052530:role/amplifynx-20190406133327-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::380227052530:role/amplifynx-20190406133327-authRole",
+            "Region": "eu-central-1",
+            "DeploymentBucketName": "amplifynx-20190406133327-deployment",
+            "UnauthRoleName": "amplifynx-20190406133327-unauthRole",
+            "StackName": "amplifynx-20190406133327",
+            "StackId": "arn:aws:cloudformation:eu-central-1:380227052530:stack/amplifynx-20190406133327/cc05f270-585f-11e9-b0ac-0649507b8a60"
+        },
+        "categories": {
+            "auth": {
+                "cognitonxtodo": {}
+            }
+        }
+    }
+}

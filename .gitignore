@@ -50,4 +50,4 @@ aws-exports.*s
 awsconfiguration.json
 src/graphql
 .graphqlconfig.yml
-amplify/team-provider-info.json
+# amplify/team-provider-info.json
