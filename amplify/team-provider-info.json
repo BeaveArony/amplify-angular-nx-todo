@@ -15,5 +15,22 @@
                 "cognitonxtodo": {}
             }
         }
+    },
+    "develop": {
+        "awscloudformation": {
+            "AuthRoleName": "amplifynx-20190410221046-authRole",
+            "UnauthRoleArn": "arn:aws:iam::380227052530:role/amplifynx-20190410221046-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::380227052530:role/amplifynx-20190410221046-authRole",
+            "Region": "eu-central-1",
+            "DeploymentBucketName": "amplifynx-20190410221046-deployment",
+            "UnauthRoleName": "amplifynx-20190410221046-unauthRole",
+            "StackName": "amplifynx-20190410221046",
+            "StackId": "arn:aws:cloudformation:eu-central-1:380227052530:stack/amplifynx-20190410221046/ba4ceb90-5bcc-11e9-a95b-0692890e48f0"
+        },
+        "categories": {
+            "auth": {
+                "cognitonxtodo": {}
+            }
+        }
     }
 }
