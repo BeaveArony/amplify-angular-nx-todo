@@ -4,7 +4,13 @@
 
 ## Getting started
 
-To deploy this project, go through the following steps:
+To deploy this project, hit this button ...
+
+<a href="https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/BeaveArony/amplify-angular-nx-todo">
+    <img src="https://oneclick.amplifyapp.com/button.svg" alt="Deploy to Amplify Console">
+</a>
+
+... or go through the following steps:
 
 1. Clone this repo
 
