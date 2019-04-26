@@ -1,7 +1,6 @@
 {
     "identityPoolName": "nx_todo_identitypool",
-    "allowUnauthenticatedIdentities": false,
-    "thirdPartyAuth": false,
+    "allowUnauthenticatedIdentities": true,
     "lambdaLogPolicy": "cognitonxtodo_lambda_log_policy",
     "openIdLambdaRoleName": "cognitonxtodo_openid_lambda_role",
     "openIdRolePolicy": "cognitonxtodo_openid_pass_role_policy",
@@ -31,6 +30,10 @@
     "userpoolClientName": "cognitonxtodo_app_client",
     "userpoolClientGenerateSecret": true,
     "userpoolClientRefreshTokenValidity": 30,
+    "userpoolClientWriteAttributes": [
+        "phone_number",
+        "email"
+    ],
     "userpoolClientReadAttributes": [
         "email",
         "phone_number"
@@ -43,13 +46,10 @@
     "userpoolClientLogPolicy": "cognitonxtodo_userpoolclient_lambda_log_policy",
     "userpoolClientLambdaPolicy": "cognitonxtodo_userpoolclient_lambda_iam_policy",
     "userpoolClientSetAttributes": true,
+    "thirdPartyAuth": false,
     "useDefault": "manual",
     "authSelections": "identityPoolAndUserPool",
     "resourceName": "cognitonxtodo",
-    "userpoolClientWriteAttributes": [
-        "phone_number",
-        "email"
-    ],
     "authRoleName": {
         "Ref": "AuthRoleName"
     },

@@ -1,36 +1,36 @@
 {
-  "master": {
-    "awscloudformation": {
-      "AuthRoleName": "amplifynx-20190410223124-authRole",
-      "UnauthRoleArn": "arn:aws:iam::380227052530:role/amplifynx-20190410223124-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::380227052530:role/amplifynx-20190410223124-authRole",
-      "Region": "eu-central-1",
-      "DeploymentBucketName": "amplifynx-20190410223124-deployment",
-      "UnauthRoleName": "amplifynx-20190410223124-unauthRole",
-      "StackName": "amplifynx-20190410223124",
-      "StackId": "arn:aws:cloudformation:eu-central-1:380227052530:stack/amplifynx-20190410223124/9c8b3f00-5bcf-11e9-880b-066084ff6f3a"
+    "master": {
+        "awscloudformation": {
+            "AuthRoleName": "amplifynx-20190410223124-authRole",
+            "UnauthRoleArn": "arn:aws:iam::380227052530:role/amplifynx-20190410223124-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::380227052530:role/amplifynx-20190410223124-authRole",
+            "Region": "eu-central-1",
+            "DeploymentBucketName": "amplifynx-20190410223124-deployment",
+            "UnauthRoleName": "amplifynx-20190410223124-unauthRole",
+            "StackName": "amplifynx-20190410223124",
+            "StackId": "arn:aws:cloudformation:eu-central-1:380227052530:stack/amplifynx-20190410223124/9c8b3f00-5bcf-11e9-880b-066084ff6f3a"
+        },
+        "categories": {
+            "auth": {
+                "cognitonxtodo": {}
+            }
+        }
     },
-    "categories": {
-      "auth": {
-        "cognitonxtodo": {}
-      }
+    "develop": {
+        "awscloudformation": {
+            "AuthRoleName": "amplifynx-20190410221046-authRole",
+            "UnauthRoleArn": "arn:aws:iam::380227052530:role/amplifynx-20190410221046-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::380227052530:role/amplifynx-20190410221046-authRole",
+            "Region": "eu-central-1",
+            "DeploymentBucketName": "amplifynx-20190410221046-deployment",
+            "UnauthRoleName": "amplifynx-20190410221046-unauthRole",
+            "StackName": "amplifynx-20190410221046",
+            "StackId": "arn:aws:cloudformation:eu-central-1:380227052530:stack/amplifynx-20190410221046/ba4ceb90-5bcc-11e9-a95b-0692890e48f0"
+        },
+        "categories": {
+            "auth": {
+                "cognitonxtodo": {}
+            }
+        }
     }
-  },
-  "develop": {
-    "awscloudformation": {
-      "AuthRoleName": "amplifynx-20190410221046-authRole",
-      "UnauthRoleArn": "arn:aws:iam::380227052530:role/amplifynx-20190410221046-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::380227052530:role/amplifynx-20190410221046-authRole",
-      "Region": "eu-central-1",
-      "DeploymentBucketName": "amplifynx-20190410221046-deployment",
-      "UnauthRoleName": "amplifynx-20190410221046-unauthRole",
-      "StackName": "amplifynx-20190410221046",
-      "StackId": "arn:aws:cloudformation:eu-central-1:380227052530:stack/amplifynx-20190410221046/ba4ceb90-5bcc-11e9-a95b-0692890e48f0"
-    },
-    "categories": {
-      "auth": {
-        "cognitonxtodo": {}
-      }
-    }
-  }
 }
